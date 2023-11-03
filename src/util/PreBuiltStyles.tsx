@@ -16,7 +16,9 @@ const DarkModeColors = {
     DarkModeTwo = 'DarkModeTwo',
     PurpleGreen = 'PurpleGreen',
     BlueHeader = 'BlueHeader',
-    Newspaper = 'Newspaper'
+    Newspaper = 'Newspaper',
+    OrangeWhite = 'OrangeWhite',
+    Greenish = 'Greenish'
   }
   
   export const StyleOptions = [
@@ -241,7 +243,124 @@ const DarkModeColors = {
               }
             }
           },
+        }
+      },
+    },{
+        name: StyleOptionList.OrangeWhite,
+        customizations: {
+          style: {
+            customCSS: {
+              variables: {
+                "--ts-var-button--secondary-color": "#454545",
+                "--ts-var-root-background": "#FFFFFF",
+                "--ts-var-root-font-family":'Trebuchet MS !important',
+                "--ts-var-button--secondary-background":"#F8F9FA",
+                "--ts-var-viz-title-color":"#3D66A4",
+                "--ts-var-viz-description-color":"#BCBCBC",
+                "--ts-var-chip-background":"none",
+                "--ts-var-chip-border-radius":"5px",
+                "--ts-var-chip-color":"#454545",
+                "--ag-header-background-color":"#fff",
+                "--ag-header-column-separator-color":"rgba(234,237,242,0)",
+                "--ag-row-height":"45px !important"
+              },
+              rules_UNSTABLE: {
+                ".pinboard-header-module__pinboardHeaderContainer":{
+                  "box-shadow":"none !important",
+                },
+                ".chip-base-module__chip.chip-base-module__sizeMedium":{
+                  "height":"3rem !important"
+                },
+                '[data-testid="filter-panel-chip"]':{
+                  "border":"1px solid #CCCCCC",
+                },
+                ".answer-actions-container-module__answerActionContainer":{
+                  "padding":"5px"
+                },
+                ".pinboard-edit-header-module__editActionHeader": {
+                  "background":"white",
+                  "color":"black"
+                },
+                ".answer-title-module__titleText":{
+                  "font-size":"0px !important",
+                  "font-weight":"600",
+                },
+                '[data-testid="description-box"]':{
+                  "display" : "none !important"
+                },
+                ".answer-content-module__answerContent":{
+                  "padding": ".8571428571rem 1.1428571429rem !important"
+                },
+                ".pinboard-content-module__tile":{
+                  "box-shadow":"none !important",
+                },
+                ".answer-content-module__compactVizContainer .answer-content-module__answerVizContainer":{
+                  "padding":"0px"
+                },
+                ".ag-header-viewport":{
+                  "border-bottom":"1px solid var(--ag-border-color,#eaedf2) !important"
+                },
+                ".ag-theme-alpine .ag-root-wrapper": {
+                  "border":"none !important"
+                  /* border-color: var(--ag-border-color,#eaedf2); */
+                },
+                ".ag-theme-alpine .ag-ltr .ag-cell":{
+                  "border-right":"none !important"
+                },
+                ".ag-header":{
+                  "min-height":'70px !important'
+                },
+                ".ag-cell":{
+                  "text-align":"center"
+                },
+                ".ag-header-cell":{
+                  "text-align":"center"
+                }
+              }
+            },
+          },
         },
+    },
+    {
+      name: StyleOptionList.Greenish,
+      customizations: {
+        style: {
+          customCSS: {
+            variables: {
+              "--ts-var-button--secondary-color": "#454545",
+              "--ts-var-root-background": "#f6f7f7",
+              "--ts-var-viz-border-radius": "0px",
+              "--ts-var-root-font-family":'Trebuchet MS !important',
+              "--ts-var-button--secondary-background":"#F8F9FA",
+              "--ts-var-viz-description-color":"#BCBCBC",
+              "--ts-var-chip-background":"#FFFFFF",
+              "--ts-var-chip-border-radius":"0",
+              "--ts-var-chip-color":"#454545"
+            },
+            rules_UNSTABLE: {
+              
+              ".answer-content-module__compactVizContainer .answer-content-module__answerVizContainer":{
+                "padding":"20px"
+              },
+              ".verified-label-module__verifiedLabel":{
+                "display":"none !important"
+              },
+              ".answer-title-module__titleText":{
+                "font-size": "22px",
+                "font-weight": 400
+              },
+              ".tile-size-s .kpi-module__hero, .tile-small .kpi-module__hero, .kpi-module__hero":{
+                "font-size": "22px !important"
+              },
+              ".chip-base-module__filter":{
+                "border": "1px solid #cccccc"
+              },
+              ".chip-base-module__chip.chip-base-module__sizeMedium":{
+                "height":"3rem !important"
+              },
+            }
+          },
+        }
       },
     }
   ]
